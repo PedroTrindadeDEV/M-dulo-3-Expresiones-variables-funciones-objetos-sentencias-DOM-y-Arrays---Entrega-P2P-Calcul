@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Calculadora</title>
-  <meta charset="utf-8">
-  <script type="text/javascript">
-    const vaciar = () => {
-      document.getElementById("pantalla").value = "";
-    }
-
-    const cuadrado = () => {
-      let num = document.getElementById("pantalla");
-      num.value = num.value * num.value;
-    }
-  </script>
-</head>
-<body>
-  Número:
-  <input type="text" id="pantalla" onclick="vaciar()">
-  <button id="cuadrado" onclick="cuadrado()">x<sup>2</sup></button>
- </body>
+  <head>
+    <title>Calculadora</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Calculadora</h1>
+      <input type="text" id="pantalla" onclick="vaciar()" />
+      <h2 id="info" class="grande" title="Info sobre el número">
+        Info sobre el número
+      </h2>
+      <h3 class="separador">Operaciones unitarias</h3>
+      <button id="cuadrado" onclick="cuadrado()">x<sup>2</sup></button>
+      <button id="modulo" onclick="mod()">Mod</button>
+      <button id="factorial" onclick="fact()">n!</button>
+      <h3>Operaciones binarias</h3>
+      <button id="suma" onclick="add()">+</button>
+      <button id="multiplicacion" onclick="mul()">*</button>
+      <button id="igual" onclick="eq()">=</button>
+      <h3>Operaciones en formato CSV</h3>
+      <button id="sumatorio" onclick="sumatorio()">Σx</button>
+      <button id="ordenar" onclick="ordenar()">ordenar</button>
+      <button id="revertir" onclick="revertir()">revertir</button>
+      <button id="quitar" onclick="quitar()">quitar</button>
+    </div>
+  </body>
 </html>
